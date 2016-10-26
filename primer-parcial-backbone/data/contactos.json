@@ -1,0 +1,21 @@
+[
+    {
+    	"id":0,
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "username": "juan.perez",
+        "telefono":0984401286,
+        "email":"juan@perez.com",
+        "direccion": "Asuncion",
+        "fechaCreacion" : "03/10/16"
+    }, {
+        "id":0,
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "username": "juan.perez",
+        "telefono":0984401286,
+        "email":"juan@perez.com",
+        "direccion": "Asuncion",
+        "fechaCreacion" : "03/10/16"
+    }
+]

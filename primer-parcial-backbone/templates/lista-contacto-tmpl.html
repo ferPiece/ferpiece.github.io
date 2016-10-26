@@ -1,0 +1,39 @@
+<!-- templates/lista-contacto-tmpl -->
+<div class="panel panel-default">
+    <div class="panel-heading">Listado de contactos</div>
+    <div class="panel-body">
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Username</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Direccion</th>
+                    <th>FechaDeCreacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% _.forEach(collection, function(item){ %>
+                    <tr>
+                        <td><%=item.id %></td>
+                        <td><%=item.nombre %></td>
+                        <td><%=item.apellido %></td>
+                        <td>@<%=item.username %></td>
+                        <td><%=item.telefono %></td>
+                        <td><%=item.email %> </td>
+                        <td><%=item.direccion %></td>
+                        <td><%=item.fechaCreacion %></td>
+                        <td>
+                           <a class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                           <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Fin templates/lista-contacto-tmpl -->

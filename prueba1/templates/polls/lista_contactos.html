@@ -1,0 +1,56 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    Contacto List
+{% endblock %}
+
+{% block content %}
+    <div class="container table-responsive">
+        <h2>Lista de Contactos</h2>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr class="well well-sm">
+                        <th></th>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Telefono</th>
+                        <th>Direccion</th>
+                        <th>Fecha de Creacion</th>
+                        <th>
+                            Acciones
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if object_list %}
+                        {% for contacto in object_list %}
+                            <div class="list-group">
+                                <tr class="well well-sm ">
+                                    <td><i class="fa fa-address-book" style="font-size:24px"></i></td>
+                                    <td>{{contacto.id}}</td>
+                                    <td>{{contacto.nombre}}</td>
+                                    <td>{{contacto.apellido}}</td>
+                                    <td>{{contacto.alias}}</td>
+                                    <td>{{contacto.email}}</td>
+                                    <td>{{contacto.telefono}}</td>
+                                    <td>{{contacto.direccion}}</td>
+                                    <td>{{contacto.fecha_creacion}}</td>
+                                    <td>
+                                        <a class="btn btn-primary glyphicon glyphicon-pencil" href="{% url 'polls:contacto_update' contacto.id %}"></a>
+                                        <a class="btn btn-danger glyphicon glyphicon-remove" href="{% url 'polls:contacto_delete' contacto.id %}"></a>
+                                    </td>
+                                </tr>
+                            </div>
+                        {% endfor%}
+                    {%else%}
+                        <h2>No hay registro de contactos</h2>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

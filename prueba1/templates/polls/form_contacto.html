@@ -1,0 +1,70 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    Agregar Contacto
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <h2>Registrarse Contactos</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form.label.name}}">{{form.alias.label}}</label>
+                    <input class="form-control" type="text" name="alias">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form.label.name}}">{{form.nombre.label}}</label>
+                    <input class="form-control" type="text" name="nombre">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form.label.name}}">{{form.apellido.label}}</label>
+                    <input class="form-control" type="text" name="apellido">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form.label.name}}">{{form.email.label}}</label>
+                    <input class="form-control" type="email" name="email">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form.label.name}}">{{form.direccion.label}}</label>
+                    <input class="form-control" type="text" name="direccion">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form.label.name}}">{{form.telefono.label}}</label>
+                    <input class="form-control" type="text" name="telefono">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

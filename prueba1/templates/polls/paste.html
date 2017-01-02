@@ -1,0 +1,35 @@
+<!--
+{% block content %}
+    <div class="container">
+        <h2>Contactos</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{form.label.name}}">{{form.nombre.label}}</label>
+                {{form.nombre}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.label.name}}">{{form.apellido.label}}</label>
+                {{form.apellido}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.label.name}}">{{form.alias.label}}</label>
+                {{form.alias}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.label.name}}">{{form.email.label}}</label>
+                {{form.email}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.label.name}}">{{form.direccion.label}}</label>
+                {{form.direccion}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.label.name}}">{{form.telefono.label}}</label>
+                {{form.telefono}}
+            </div>
+            <button type="submit" class="btn btn-default glyphicon glyphicon-floppy-disk">  Guardar Contacto</button>
+        </form>
+    </div>
+{% endblock %}
+-->
